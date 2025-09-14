@@ -1,4 +1,4 @@
-# 🌐 Personal Developer Portfolio
+# 🌐 Rishikesh Koli – Developer Portfolio
 
 Welcome to the source code of my **personal portfolio website**.  
 This project is designed to showcase my skills, projects, achievements, and journey as a developer 🚀.  
@@ -48,7 +48,7 @@ Follow these steps to run the project locally:
 
 ```bash
 # Clone the repo
-git clone https://github.com/yourusername/portfolio.git
+git clone https://github.com/rishikeshkoli/portfolio.git
 
 # Go inside the folder
 cd portfolio
