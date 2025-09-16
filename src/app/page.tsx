@@ -5,7 +5,6 @@ import { projects } from "@/data/projects";
 import { skills } from "@/data/skills";
 import ProjectCard from "@/components/ProjectCard";
 import ContactForm from "@/components/ContactForm";
-import CardCarousel from "@/components/CardCarousel";
 import InfiniteCarousel from "@/components/InfiniteCarousel";
 
 export default function Home() {
@@ -115,7 +114,7 @@ export default function Home() {
         <div className="grid md:grid-cols-2 gap-8 items-start">
           <ContactForm />
           <div className="glass rounded-2xl p-6 space-y-4 hover-lift">
-            <h3 className="text-lg font-semibold mb-4 text-[var(--color-accent)]">Let's Connect</h3>
+            <h3 className="text-lg font-semibold mb-4 text-[var(--color-accent)]">Let&apos;s Connect</h3>
             <div className="space-y-3">
               <a 
                 href="mailto:1983rishikesh@gmail.com" 
