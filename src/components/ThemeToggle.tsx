@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { gsap } from "gsap";
 
 // Allowed values
 export type ThemeMode = "system" | "light" | "dark";
@@ -21,7 +22,7 @@ export default function ThemeToggle() {
   const [mode, setMode] = useState<ThemeMode>("system");
   const [open, setOpen] = useState(false);
   const iconRef = useRef<SVGSVGElement | null>(null);
-  const tlRef = useRef<any>(null);
+  const tlRef = useRef<gsap.core.Timeline | null>(null);
 
   useEffect(() => {
     const saved = (localStorage.getItem("theme") as ThemeMode | null) ?? "system";
