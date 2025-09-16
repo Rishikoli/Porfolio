@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, LegacyRef } from "react";
 import AnimatedBackground from "./AnimatedBackground";
 import MorphingSVG from "./MorphingSVG";
 
@@ -216,7 +216,7 @@ export default function Hero() {
           const accent2 = getComputedStyle(document.documentElement).getPropertyValue("--accent-2").trim() || "#3b82f6";
           el.style.backgroundImage = `linear-gradient(90deg, ${accent}, ${accent2}, ${accent})`;
           el.style.backgroundClip = "text";
-          (el.style as any).WebkitBackgroundClip = "text";
+          (el.style as CSSStyleDeclaration & { WebkitBackgroundClip: string }).WebkitBackgroundClip = "text";
           el.style.color = "transparent";
           el.style.backgroundSize = "200% 100%";
           if (!reduced) {
@@ -233,7 +233,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <section ref={rootRef as any} id="home" className="relative overflow-hidden pt-10 sm:pt-16 pb-16 sm:pb-24 bg-background text-foreground">
+    <section ref={rootRef as LegacyRef<HTMLElement>} id="home" className="relative overflow-hidden pt-10 sm:pt-16 pb-16 sm:pb-24 bg-background text-foreground">
       {/* Animated Background */}
       <AnimatedBackground />
       
