@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 700" width="900" height="700">
+  <defs>
+    <linearGradient id="ll" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f3ff9e"/>
+      <stop offset="55%" stop-color="#d9ff3f"/>
+      <stop offset="100%" stop-color="#84cc16"/>
+    </linearGradient>
+    <filter id="goo2" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="18" result="blur"/>
+      <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 24 -10" result="goo"/>
+      <feBlend in="SourceGraphic" in2="goo"/>
+    </filter>
+  </defs>
+  <g filter="url(#goo2)">
+    <path fill="url(#ll)" d="M453 103c72 10 135 39 180 89 49 54 84 130 63 196-22 67-96 121-168 168-73 47-142 85-214 75-72-10-145-70-180-141-34-72-30-158 16-226 48-71 135-122 217-143 58-15 123-21 186-18z"/>
+    <circle cx="620" cy="270" r="76" fill="url(#ll)" opacity="0.8"/>
+    <circle cx="300" cy="210" r="56" fill="url(#ll)" opacity="0.65"/>
+  </g>
+</svg>
